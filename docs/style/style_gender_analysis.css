@@ -1,0 +1,463 @@
+@font-face {
+    font-family: 'Ostrich Sans-Inline';
+    src: url('fonts/OstrichSansInline-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Ostrich Sans-Bold';
+    src: url('fonts/OstrichSans-Bold.otf');
+}
+
+@font-face {
+    font-family: 'Ostrich Sans-Black';
+    src: url('fonts/OstrichSans-Black.otf');
+}
+
+@font-face {
+    font-family: 'Ostrich Sans-Medium';
+    src: url('fonts/OstrichSans-Medium.otf');
+}
+
+@font-face {
+    font-family: 'JosefinSans';
+    src: url('fonts/JosefinSans-ExtraLight.ttf');
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'JosefinSans',Courier,arial,helvetica, sans-serif;
+    font-size: 110%;
+}
+
+.intro,
+.intro p,
+.intro h1,
+.intro h2,
+.intro h3,
+.intro a{
+    clear:both;
+    margin: 10px 50px 10px 50px;
+}
+
+#banner {
+    padding: 12em 0 12em 0;
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    border-top: 0.3em solid hsl(220, 33%, 4%);
+}
+
+#banner h1 {
+    font-size: 3.5em;
+    font-weight: 100;
+    color: white;
+    line-height: 1em;
+    margin: 0 0 0 0;
+    padding: 0;
+    font-family: 'Ostrich Sans-Bold',Courier,arial,helvetica, sans-serif;
+}
+
+#banner p {
+    font-size: 1em;
+    color:white;
+    margin-bottom: 2em;
+    font-family: Courier,arial,helvetica, sans-serif;
+}
+
+#menubar {
+    padding: 5px 25px 5px 25px;
+    margin: -45px 0 0 0;
+    position: relative; 
+    float: left;
+    font-size: 80%;
+}
+
+ul#menu li {
+    float: left;
+    margin: 5px 0 10px 0;
+    padding: 0 0 20px 5px;
+    list-style: none;
+}
+
+ul#menu li a {
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: block;
+    height: 25px;
+    text-decoration: none;
+    padding: 5px 25px 5px 25px;
+    float: left;
+    text-align: center;
+    color: #fff;
+    font-family: Courier,arial,helvetica, sans-serif;
+}
+
+ul#menu li.selected a {
+    height: 25px;
+    color: black;
+    padding: 5px 25px 5px 25px;
+}
+
+ul#menu li.selected {
+    margin: 5px 0 5px 0;
+    background: white;
+}
+
+ul#menu li a:hover {
+    color: black;
+}
+
+.intro h1,
+.intro h3{
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif;
+}
+
+#content {
+    width : 1000px;
+    margin-top: 25px;
+    display: block;
+    text-align: center;
+}
+
+#selectbar {
+    margin-top: 50px;
+    margin-bottom: 50px; 
+}
+
+/* Bar Chart */
+
+.barchart svg {
+    width: 100%;
+    height: 100%;
+    position: center;
+}
+
+path.slice{
+    stroke-width:2px;
+}
+
+text{
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+    font-size: 80%;
+}
+
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+}
+
+.labelValue
+{
+    font-size: 60%;
+    opacity: .5;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+}
+
+label {
+    font-weight: normal;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+    font-size: 84%;
+}
+
+.toolTip {
+    position: absolute;
+    display: none;
+    width: auto;
+    height: auto;
+    background: none repeat scroll 0 0 white;
+    border: 0 none;
+    border-radius: 8px 8px 8px 8px;
+    box-shadow: -3px 3px 15px #888888;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+}
+
+
+.legend {
+    font-size: 60%;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+}
+rect {
+    stroke-width: 2;
+}
+
+
+text.value{
+    font-size: 200%;
+    fill: white;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+}
+
+text.label{
+    font-size: 100%;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+}
+
+.axis text {
+    font: 10px;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif; 
+}
+
+
+.axis path{
+    fill: none;
+    stroke: #000;
+}
+
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axis .tick line {
+    stroke-width: 1;
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+.axisHorizontal path{
+    fill: none;
+}
+
+.axisHorizontal line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.axisHorizontal .tick line {
+    stroke-width: 1;
+    stroke: rgba(0, 0, 0, 0.2);
+}
+
+.bar {
+    fill: #962D3E;
+    fill-opacity: .9;
+}
+
+.x.axis path {
+    display: none;
+}
+
+/* Stacked Bar Chart*/
+#stackedbarchart {
+	font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif;
+}
+
+#stackedbarchart h3 {
+	margin-bottom: 1em;
+}
+#stackedbarchart h6 {
+	font-size: 0.8em;
+	padding: 0 0 .5em;
+    color: black;
+}
+#stackedbarchart figure {
+	margin: 0 auto;
+	max-width: 1100px;
+	position: relative;
+}
+#stackedbarchart .graphic {
+	padding-left: 30px;
+}
+#stackedbarchart .row {
+	margin-bottom: 1.5em;
+}
+@keyframes expand {
+	from {width: 0%;}
+	to {width: 100%;}
+}
+@media screen and (min-width: 768px) {
+	@keyframes expand {
+		from {width: 0%;}
+		to {width: calc(95% - 75px);}
+	}
+}
+#stackedbarchart .chart {
+	overflow: hidden;
+	width: 0%;
+	animation: expand 1.5s ease forwards;
+}
+#stackedbarchart .row + .row .chart {
+	animation-delay: .2s;
+}
+#stackedbarchart .row + .row + .row .chart {
+	animation-delay: .4s;
+}
+.block {
+	display: block;
+	height: 100px;
+	color: #fff;
+	font-size: .75em;
+	float: left;
+	background-color: #334D5C;
+	position: relative;
+	overflow: hidden;
+	opacity: 1;
+	transition: opacity, .3s ease;
+	cursor: pointer;
+}
+.block:nth-of-type(2),
+.legend li:nth-of-type(2):before {
+	background-color: #962D3E;
+}
+
+.block:hover {
+	opacity: .65;
+}
+.value {
+	display: block;
+	line-height: 1em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
+}
+.x-axis {
+    text-align: center;
+	padding: .5em 0 2em;
+}
+
+.legend {
+    margin: 0 auto;
+    padding: 0;
+	font-size: .8em;
+}
+.legend li {
+    display: inline-block;
+    padding: .25em 1em;
+    line-height: 1em;
+}
+.legend li:before {
+    content: "";
+    margin-right: .5em;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+	background-color: #334D5C;
+}
+@media screen and (min-width: 768px) {
+	h6 {    
+		padding: 0;
+		width: 75px;
+		float: left;
+		line-height: 100px;
+	}
+	.block {
+		font-size: 0.7em;
+	}
+	.legend {
+		width: 70%;
+	}
+}
+
+/* Chart */
+.chart {
+    border-radius: 3px;
+    box-shadow: 0 0 10px -3px black;
+    float: left;
+    margin: 15px 2.5%;
+    position: relative;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif;
+    text-align: center;
+  }
+  canvas {
+    height: 280px;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .header {
+    *zoom: 1;
+  }
+  .header:before,
+  .header:after {
+    content: "";
+    display: table;
+  }
+  .header:after {
+    clear: both;
+  }
+  .header span {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px;
+    padding: 4px;
+  }
+  .header .left {
+    float: left;
+  }
+  .header .right {
+    float: right;
+  }
+  .title {
+    font-size: 18px;
+    margin: 0;
+    padding: 15px 0 5px;
+  }
+  .title + .tagline {
+    margin-top: 10px;
+  }
+  .tagline {
+    font-size: 10px;
+  }
+  .light {
+    background-color: #FBFCFD;
+    color: #274A61;
+  }
+  .dark {
+    background-color: #274A61;
+    color: #FBFCFD;
+  }
+  main {
+    text-align: center;
+  }
+  .hidden {
+    display: none;
+  }
+  body {
+    background-color: #45535C;
+    color: #202020;
+    font-family: "Open Sans", "Helvetica", "Arial";
+    font-size: 20px;
+  }
+  .container {
+    *zoom: 1;
+    font-size: 0;
+    margin: 0 auto 145px;
+    max-width: 960px;
+    padding: 0;
+    width: 100%;
+  }
+  .container:before,
+  .container:after {
+    content: "";
+    display: table;
+  }
+  .container:after {
+    clear: both;
+  }
+
+/* Bubble Char*/
+.highcharts-tooltip h3 {
+    margin: 0.3em 0;
+    font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif;
+}
