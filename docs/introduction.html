@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Introduction</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style/style_introduction.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Banner -->
+	<section id="banner">
+		<h1>Pre-trial and Sentenced Inmates Analysis</h1>
+		<p>Various Race and Gender Inmates held by the Department of Correction</p>
+  </section><!-- Banner -->
+
+    <!-- Header -->
+    <div id="menubar">
+        <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li class="selected"><a href="introduction.html">Introduction</a></li>
+                <li><a href="race_analysis.html">Race Analysis</a></li>
+                <li><a href="gender_analysis.html">Gender Analysis</a></li>
+        </ul> 
+    </div>      
+
+    <div class='intro'>
+        <h1>Introduction</h1>
+        <p>Throughout the world, there have been racial and gender discrepancies in many aspects for a long time through history until present. Sometimes, one race or gender was treated differently from others which refer to inequality among various race and gender. Even the inequality seems to be subsided  day by day comparing to the past, but there still exist in the community. The inclination on pre-trail and sentenced judgment of individuals is also included in this unfairness.</p> 
+        <h3>American's racial and gender diversity</h3>
+        <p>The United States is the third most populous country in the world and definitely one of the world’s most ethnically diverse countries. White Americans are the racial majority followed by Hispanic, Black, Asian and American Indian respectively. Surprisingly, female population in U.S is a bit more than male in contrast to the whole world population which male is slightly more than famale in total number on 2018.</p> 
+        <p style="font-size:12px">*Note! individuals who have multiple race were identified as 'Other' *</p>
+    </div>
+     
+
+    <!-- partial:index.partial.html -->
+    <!-- Point of entry for Vue-->
+    <div class="row">
+        <section class="col-sm-12 col-md-4">  
+            <div id="app">
+                <chart :size="size" :sectors="sectors"></chart>
+            </div>
+            <!-- Component Templates-->
+            <template id="chart">
+                <div class="chart">
+                <svg :style="styleObj">
+                    <defs>
+                    <mask id="circleClip">
+                        <rect fill="white" width="100%" height="100%"></rect>
+                        <circle fill="black" :cx="size * 0.55" :cy="size * 0.55" :r="size * 0.28"></circle>
+                    </mask>
+                    </defs>
+                    <g mask="url(#circleClip)">
+                    <g class="sector" v-for="(s, i) in processedSectors" @mouseover="text=s.label, show=s.show" @mouseleave="text=&quot;&quot;, show=&quot;&quot;">
+                        <path :fill="s.color" :d="s.d" :transform="s.transform"></path>
+                    </g>
+                    </g>
+                    <circle fill="none" :cx="size * 0.55" :cy="size * 0.55" :r="size * 0.28"></circle>
+                    <text fill="black" :x="size * 0.55" :y="size * 0.55 - 2" font-size="20" text-anchor="middle">{{text}}</text>
+                    <text fill="black" :x="size * 0.55" :y="size * 0.55 + 2" font-size="24" text-anchor="middle" dominant-baseline="hanging">{{show}}</text>
+                </svg>
+                </div>
+            </template>
+            <!-- partial -->
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+                <script  src="js/main_piechart.js"></script>
+        </section>
+  
+        <div class="clearfix visible-md-block"></div>
+  
+        <section class="col-sm-12 col-md-4">  
+          <br><br/>
+          <br><br/>
+          <h4> &#8678; U.S. Population By Race</h4> 
+          <br><br/>
+          <h4>U.S. Population By Gender &#8680;</h4>
+        </section>
+        
+        <div class="clearfix visible-md-block"></div>
+
+        <section class="col-sm-12 col-md-4">  
+          <div id="app2">
+            <chart :size="size" :sectors="sectors"></chart>
+          </div>
+          <!-- Component Templates-->
+          <template id="chart">
+              <div class="chart">
+              <svg :style="styleObj">
+                  <defs>
+                  <mask id="circleClip">
+                      <rect fill="white" width="100%" height="100%"></rect>
+                      <circle fill="black" :cx="size * 0.55" :cy="size * 0.55" :r="size * 0.28"></circle>
+                  </mask>
+                  </defs>
+                  <g mask="url(#circleClip)">
+                  <g class="sector" v-for="(s, i) in processedSectors" @mouseover="text=s.label, show=s.show" @mouseleave="text=&quot;&quot;, show=&quot;&quot;">
+                      <path :fill="s.color" :d="s.d" :transform="s.transform"></path>
+                  </g>
+                  </g>
+                  <circle fill="none" :cx="size * 0.55" :cy="size * 0.55" :r="size * 0.28"></circle>
+                  <text fill="black" :x="size * 0.55" :y="size * 0.55 - 2" font-size="20" text-anchor="middle">{{text}}</text>
+                  <text fill="black" :x="size * 0.55" :y="size * 0.55 + 2" font-size="24" text-anchor="middle" dominant-baseline="hanging">{{show}}</text>
+              </svg>
+              </div>
+          </template>
+          <!-- partial -->
+              <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+              <script  src="js/main_piechart2.js"></script>
+          </section>
+      </div>
+    
+    <div class='intro'>
+        <h3>Pre-trial Inmates</h3>
+        <p>Who is detained pre-trial held by the Department of Correction? More than a half of pre-trial inmates are identified as Black or White. While there are just a few number of Asian and American Indian inmates. In term of gender, it is obviously that male were detained pre-trial much more than female.</p> 
+    </div>
+
+    <body id='stackedbar'>
+        <!-- partial:index.partial.html -->
+        <div class="main-wrapper">
+          <div class="wrapper">
+            <div class="cards">
+              <div class="listen-wrap">
+                <ul>
+                  <li>
+                    <span class="count">16134</span>
+                    <span>Total <br> Pre-tria</span>
+                  </li>
+                  <li>
+                    <span class="count">13594</span>
+                    <span>Male<br>Pre-trial</span>
+                  </li>
+                  <li>
+                    <span class="count">2540</span>
+                    <span>Female<br>Pre-trial</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="chart-wrapper" id="chart-bar">
+              <h1>Number of Pretrial inmates held by the Department of Correction in 2018</h1>
+              <ul class="vbroadcast-legend">
+                <li class="successful">Male</li>
+                <li class="unsuccessful">Famale</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js'></script>
+        <script  src="js/main_stacked.js"></script>
+ 
+</body>
+
+</html>

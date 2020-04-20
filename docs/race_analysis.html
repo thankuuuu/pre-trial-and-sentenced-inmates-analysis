@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Race Analysis</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style/style_race_analysis.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+
+<body>
+
+    <!-- Banner -->
+	<section id="banner">
+		<h1>Pre-trial and Sentenced Inmates Analysis</h1>
+		<p>Various Race and Gender Inmates held by the Department of Correction</p>
+    </section><!-- Banner -->
+
+    <!-- Header -->
+    <div id="menubar">
+        <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li class="selected"><a href="analysis.html">Race Analysis</a></li>
+                <li><a href="gender_analysis.html">Gender Analysis</a></li>
+        </ul> 
+    </div> 
+    
+    <div class='intro'>
+        <h3>Population VS Crime VS Pre-trial Inmates by Race</h3>
+    </div>
+
+    <section class="col-sm-12 col-md-8">  
+        <body id="stackedbarchart">   
+        <!-- partial:index.partial.html -->
+        <figure>
+        
+        <div class="graphic">
+        
+            <div class="row">
+                <h6>Total Population</h6>
+                <div class="chart">
+                <span class="block" title="White - 197,064,732 People (61.46%)">
+                    <span class="value">61.46%</span>
+                </span>
+                <span class="block" title="Hispanic - 62,917,648 People (19.62%)">
+                    <span class="value">19.62%</span>
+                </span>
+                <span class="block" title="Black - 40,310,242 People (12.57%)">
+                    <span class="value">12.57%</span>
+                </span>
+                <span class="block" title="Asian - 18,195,260 People (5.67%)">
+                    <span class="value">5.67%</span>
+                </span>
+                <span class="block" title="American IND - 2,180,266 People (0.68%)">
+                    <span class="value">0.68%</span>
+                </span>
+                </div>
+            </div>
+    
+            <div class="row">
+                <h6>Total Crime</h6>
+                <div class="chart">
+                <span class="block" title="White - 5,319,654 People (59.88%)">
+                    <span class="value">59.88%</span>
+                </span>
+                <span class="block" title="Hispanic - 1,191,334 People (13.41%)">
+                    <span class="value">13.41%</span>
+                </span>
+                <span class="block" title="Black - 2,115,381 People (23.81%)">
+                    <span class="value">23.81%</span>
+                </span>
+                <span class="block" title="Asian - 92,737 People (1.04%)">
+                    <span class="value">1.04%</span>
+                </span>
+                <span class="block" title="American IND - 164,430 People (1.85%)">
+                    <span class="value">1.85%</span>
+                </span>
+                </div>
+            </div>
+        
+            <div class="row">
+                <h6>Pre-trial Inmates</h6>
+                <div class="chart">
+                <span class="block" title="White - 6,112 People (37.88%)">
+                    <span class="value">37.88%</span>
+                </span>
+                <span class="block" title="Hispanic - 4,141 People (25.67%)">
+                    <span class="value">25.67%</span>
+                </span>
+                <span class="block" title="Black - 5,711 People (35.40%)">
+                    <span class="value">35.40%</span>
+                </span>
+                <span class="block" title="Asian - 120 People (0.74%)">
+                    <span class="value">0.74%</span>
+                </span>
+                <span class="block" title="American IND - 50 People (0.31%)">
+                    <span class="value">0.31%</span>
+                </span>
+                </div>
+            </div>
+        
+            <div class="row">
+                <h6>Sentenced after Pre-trial Inmates</h6>
+                <div class="chart">
+                <span class="block" title="White - 1,109 People (38.15%)">
+                    <span class="value">38.15%</span>
+                </span>
+                <span class="block" title="Hispanic - 718 People (24.70%)">
+                    <span class="value">24.70%</span>
+                </span>
+                <span class="block" title="Black - 1057 People (36.36%)">
+                    <span class="value">36.36%</span>
+                </span>
+                <span class="block" title="Asian - 14 People (0.48%)">
+                    <span class="value">0.48%</span>
+                </span>
+                <span class="block" title="American IND - 9 People (0.31%)">
+                    <span class="value">0.31%</span>
+                </span>
+                </div>
+            </div>
+        </div>
+        
+            <div class="x-axis">
+                <h3>Percent Portion by Rcae</h3>
+                <ul class="legend">
+                    <li>White</li>
+                    <li>Hispanic</li>
+                    <li>Black</li>
+                    <li>Asian</li>
+                    <li>American IND</li>
+                </ul>
+            </div>
+        </body>  
+      
+        </figure>
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+        <script  src="js/main_stackedbarchart.js"></script>
+        </section>
+  
+        <div class="clearfix visible-md-block"></div>
+
+        <section class="col-sm-12 col-md-4"> 
+            <br></br>
+            <br></br>    
+            <div class="chart radar-chart dark">
+                <h3 class="title">Total Crime VS Inmated held by the Department of Correction in 2018</h3>
+                <p class="tagline">*Comparing to Their Own Race Population Group</p>
+                <canvas id="radarChartDark"></canvas>
+            </div>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js'></script>
+            <script  src="js/chartrace.js"></script>
+        </section>
+
+    <div class='intro'>
+        <p>The portion bar chart revealed that even the population of white people is about 5 times of black people and the crime rate of white people is more than twice of black people, but the number of pre-trial white inmates is just nearly the same number as black inmates. However, the portion of pre-trail inmates and sentenced inmates after being pre-trail are insignificantly different which suggests that percent of being sentenced after pre-trail are likely to be the same regardless their race.</p> 
+        <p>To clearly see how each race was detained pre-trail compare to the number of their crime. The radar chart above show the number of each race crime in 2018 per thousand of their own population and the number of each race pre-trial inmates held by the Department of Correction in 2018 per million of their own population. The number of Black and Hispanic that were detained pre-trial is quite a lot considering their committing crime, especially for Black people when compare to others race. In contrast, American Indian is the only race among this group that the number of pre-trial inmates per 1M population is less the number of crime per 1K population.</p> 
+        <br></br>
+        <h3>Percent being Sentenced after Pre-trial</h3>
+    </div>
+
+    <body id='barchart'>
+    <form>
+        <label><input type="radio" name="dataset" id="dataset" value="total" checked> Total</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option1">VIOLATION OF PROBATION OR COND</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option2">CRIM VIOL OF PROTECTIVE ORDER</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option3">BURGLARY, THIRD DEGREE</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option4">FAILURE TO APPEAR, SECOND DEGREE </label>
+        <label><input type="radio" name="dataset" id="dataset" value="option5">INJURY OR RISK OF INJURY TO MINOR</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option6">ASSAULT, THIRD DEGREE</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option7">FAILURE TO APPEAR, FIRST DEGREE</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option8">ASSAULT, FIRST DEGREE</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option9">CRIMINAL POSSESSION OF A PISTOL</label>
+        <label><input type="radio" name="dataset" id="dataset" value="option10">ROBBERY, FIRST DEGREE</label>
+    </form>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script  src="js/main_barchart1.js"></script>
+    </body>
+
+    <div class='intro'>
+        <p>Focusing on percent being sentenced after pre-trail, Asian has the lowest percent with about 12 percent, while others race percent being sentenced are above Asian inmates which are around 18%.</p> 
+        <br></br>
+        <h3>Sentenced Days and Bond Amount</h3>
+        <p>Sentenced days is number of days to be imprison after being sentenced. On the other hand, bond amounts set financial conditions for pretrial release. The bond amount used to calculate the average here is the first day's bond amount as sometimes it can be changed during inmate’s  pre-trial process. Let's see whether the average sentenced days and bond amount of each race are nearly the same level or not ?</p> 
+    </div>
+
+    <div id="container" style="height: 400px; min-width: 400px; max-width: 1000px; margin: 0 auto"></div>
+    <!-- partial -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script  src="js/bubblechart1.js"></script>
+    
+    <div class='intro'>
+        <p>Both of average sentenced days and bond amount of Asian inmates are somewhat exceed the total average number and stay on the top among five race. On the other hand, inmates who identified as Black or Hispanic stay near the total average line while American Indian inmates seems to be sentenced with low sentence days, but with the second highest in term of bond amount among these groups. Notably, White inmates is the only race that was set financial conditions for pretrial release lower than the total average.</p> 
+        <br></br>
+    </div>
+    
+
+</body>
+
+</html>
