@@ -397,10 +397,7 @@ text.label{
   canvas {
     height: 280px;
     margin: 10px 0;
-    width: 100%;
-  }
-  .header {
-    *zoom: 1;
+
   }
   .header:before,
   .header:after {
