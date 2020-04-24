@@ -41,6 +41,7 @@ var Charts = /** @class */ (function () {
                 ]
             },
             options: {
+                responsive: false,
                 scale: {
                     pointLabels: {
                         fontColor: this.tickColor
