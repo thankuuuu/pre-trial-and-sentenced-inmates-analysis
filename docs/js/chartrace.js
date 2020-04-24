@@ -59,7 +59,7 @@ var Charts = /** @class */ (function () {
                 }
             }
         },
-        myDarkRadarChart = new Chart(ctxD, chartData);
+        myDarkRadarChart = new Chart(ctxD, chartData), myLightRadarChart = new Chart(ctxL, chartData);
     };
 
     Charts.prototype.convertHex = function (hex, opacity) {
