@@ -399,30 +399,6 @@ text.label{
     margin: 10px 0;
     width: 100%;
   }
-  .header {
-    *zoom: 1;
-  }
-  .header:before,
-  .header:after {
-    content: "";
-    display: table;
-  }
-  .header:after {
-    clear: both;
-  }
-  .header span {
-    cursor: pointer;
-    display: inline-block;
-    font-size: 20px;
-    margin: 5px;
-    padding: 4px;
-  }
-  .header .left {
-    float: left;
-  }
-  .header .right {
-    float: right;
-  }
   .title {
     font-size: 18px;
     margin: 0;
@@ -447,12 +423,6 @@ text.label{
   }
   .hidden {
     display: none;
-  }
-  body {
-    background-color: #45535C;
-    color: #202020;
-    font-family: "Open Sans", "Helvetica", "Arial";
-    font-size: 20px;
   }
 
 /* Bubble Char*/
