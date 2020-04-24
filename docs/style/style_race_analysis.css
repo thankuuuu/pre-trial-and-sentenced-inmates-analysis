@@ -394,10 +394,30 @@ text.label{
     font-family: 'Ostrich Sans-Medium',Courier,arial,helvetica, sans-serif;
     text-align: center;
   }
-  canvas {
-    height: 280px;
-    margin: 10px 0;
-    width: 100%;
+ 
+  .header {
+    *zoom: 1;
+  }
+  .header:before,
+  .header:after {
+    content: "";
+    display: table;
+  }
+  .header:after {
+    clear: both;
+  }
+  .header span {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px;
+    padding: 4px;
+  }
+  .header .left {
+    float: left;
+  }
+  .header .right {
+    float: right;
   }
   .title {
     font-size: 18px;
@@ -417,12 +437,6 @@ text.label{
   .dark {
     background-color: #274A61;
     color: #FBFCFD;
-  }
-  main {
-    text-align: center;
-  }
-  .hidden {
-    display: none;
   }
 
 /* Bubble Char*/
