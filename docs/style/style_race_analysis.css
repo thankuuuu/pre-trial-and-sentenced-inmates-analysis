@@ -397,7 +397,10 @@ text.label{
   canvas {
     height: 280px;
     margin: 10px 0;
-
+    width: 100%;
+  }
+  .header {
+    *zoom: 1;
   }
   .header:before,
   .header:after {
@@ -451,22 +454,7 @@ text.label{
     font-family: "Open Sans", "Helvetica", "Arial";
     font-size: 20px;
   }
-  .container {
-    *zoom: 1;
-    font-size: 0;
-    margin: 0 auto 145px;
-    max-width: 960px;
-    padding: 0;
-    width: 100%;
-  }
-  .container:before,
-  .container:after {
-    content: "";
-    display: table;
-  }
-  .container:after {
-    clear: both;
-  }
+
 
 /* Bubble Char*/
 .highcharts-tooltip h3 {
