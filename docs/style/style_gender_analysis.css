@@ -433,12 +433,7 @@ text.label{
   .hidden {
     display: none;
   }
-  body {
-    background-color: #45535C;
-    color: #202020;
-    font-family: "Open Sans", "Helvetica", "Arial";
-    font-size: 20px;
-  }
+
 
 /* Bubble Char*/
 .highcharts-tooltip h3 {
